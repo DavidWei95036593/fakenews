@@ -34,19 +34,31 @@ for(var i =1; i<paragraph.length; i+=2){
 }
 
 
-//when you highlight a paragraph, the title will change
+//when you put a mouse on a paragraph, the title will change
+//this select the paragraphs that has classname teaser
 var paragraphs = document.getElementsByClassName("teaser");
+//use for loop to select all elements in the paragraphs
 for(var i = 0; i< paragraphs.length; i++){
-
-paragraphs[i].addEventListener("mouseover",function(){
-
-	title[0].innerHTML = title[0].innerHTML.replace(/hacked/g,"trumped");
-	for (var i = 0; i < title.length; i ++){
-		//change every hacked to trumped
-  title[i].innerHTML = title[i].innerHTML.replace(/hacked/g,"trumped");
+	paragraphs[i].addEventListener("mouseover",function(){
+			for (var i = 0; i < title.length; i ++){
+				//change every hacked to trumped
+  				title[i].innerHTML = title[i].innerHTML.replace(/hacked/g,"trumped");
 }
-}
-})
+})}
+
+//when you put mouse on a title, the title will change
+var titles = document.getElementsByClassName("title");
+	for(var i = 0; i <titles.length; i ++){
+		titles[i].addEventListener("mouseover",function(){
+			for(var i =0; i< title.length; i++){
+				title[0].innerHTML = title[0].innerHTML.replace(/trumped/g,"hacked");
+			}
+
+			
+		})
+	}
+
+
 
 
 
