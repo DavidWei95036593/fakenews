@@ -35,17 +35,22 @@ for(var i =1; i<paragraph.length; i+=2){
 
 
 //when you highlight a paragraph, the title will change
-var paragraphs = document.getElementsByClassName("teaser")
+var paragraphs = document.getElementsByClassName("teaser");
+for(var i = 0; i< paragraphs.length; i++){
 
-paragraphs.addEventListener("mouseover",function(){
+paragraphs[i].addEventListener("mouseover",function(){
 
 	title[0].innerHTML = title[0].innerHTML.replace(/hacked/g,"trumped");
-	// for (var i = 0; i < title.length; i ++){
-	// 	//change every hacked to trumped
- //  title[i].innerHTML = title[i].innerHTML.replace(/hacked/g,"trumped");
+	for (var i = 0; i < title.length; i ++){
+		//change every hacked to trumped
+  title[i].innerHTML = title[i].innerHTML.replace(/hacked/g,"trumped");
 }
-
+}
 })
+
+
+
+
 
 // - New titles on every title (some of them can be the same title)
 
