@@ -33,6 +33,20 @@ for(var i =1; i<paragraph.length; i+=2){
 	paragraph[i].innerHTML ="French Surrender, Britain is alone";
 }
 
+
+//when you highlight a paragraph, the title will change
+var paragraphs = document.getElementsByClassName("teaser")
+
+paragraphs.addEventListener("mouseover",function(){
+
+	title[0].innerHTML = title[0].innerHTML.replace(/hacked/g,"trumped");
+	// for (var i = 0; i < title.length; i ++){
+	// 	//change every hacked to trumped
+ //  title[i].innerHTML = title[i].innerHTML.replace(/hacked/g,"trumped");
+}
+
+})
+
 // - New titles on every title (some of them can be the same title)
 
 // - New articles (These don't need to be anything fancy, just different then what you see on the
